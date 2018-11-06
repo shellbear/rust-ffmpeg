@@ -298,7 +298,7 @@ pub enum Id {
     ADPCM_G722,
     ADPCM_IMA_APC,
     ADPCM_VIMA,
-    VIMA,
+    //VIMA,
 
     ADPCM_AFC,
     ADPCM_IMA_OKI,
@@ -481,6 +481,11 @@ pub enum Id {
     FITS,
     GREMLIN_DPCM,
     DOLBY_E,
+
+    CODEC2,
+    APTX,
+    APTX_HD,
+    SBC,
 }
 
 impl Id {
@@ -965,6 +970,11 @@ impl From<AVCodecID> for Id {
             AV_CODEC_ID_FITS => Id::FITS,
             AV_CODEC_ID_GREMLIN_DPCM => Id::GREMLIN_DPCM,
             AV_CODEC_ID_DOLBY_E => Id::DOLBY_E,
+
+            AV_CODEC_ID_CODEC2 => Id::CODEC2,
+            AV_CODEC_ID_APTX => Id::APTX,
+            AV_CODEC_ID_APTX_HD => Id::APTX_HD,
+            AV_CODEC_ID_SBC => Id::SBC,
         }
     }
 }
@@ -1262,7 +1272,7 @@ impl Into<AVCodecID> for Id {
             Id::ADPCM_G722 => AV_CODEC_ID_ADPCM_G722,
             Id::ADPCM_IMA_APC => AV_CODEC_ID_ADPCM_IMA_APC,
             Id::ADPCM_VIMA => AV_CODEC_ID_ADPCM_VIMA,
-            Id::VIMA => AV_CODEC_ID_VIMA,
+            //Id::VIMA => AV_CODEC_ID_VIMA,
 
             Id::ADPCM_AFC => AV_CODEC_ID_ADPCM_AFC,
             Id::ADPCM_IMA_OKI => AV_CODEC_ID_ADPCM_IMA_OKI,
@@ -1445,6 +1455,11 @@ impl Into<AVCodecID> for Id {
             Id::FITS => AV_CODEC_ID_FITS,
             Id::GREMLIN_DPCM => AV_CODEC_ID_GREMLIN_DPCM,
             Id::DOLBY_E => AV_CODEC_ID_DOLBY_E,
+
+            Id::CODEC2 => AV_CODEC_ID_CODEC2,
+            Id::APTX => AV_CODEC_ID_APTX,
+            Id::APTX_HD => AV_CODEC_ID_APTX_HD,
+            Id::SBC => AV_CODEC_ID_SBC,
         }
     }
 }
