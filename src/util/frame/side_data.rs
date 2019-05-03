@@ -30,6 +30,8 @@ pub enum Type {
 
     QpTableProperties,
     QpTableData,
+
+    S12MTimeCode,
 }
 
 impl Type {
@@ -65,6 +67,7 @@ impl From<AVFrameSideDataType> for Type {
 
             AV_FRAME_DATA_QP_TABLE_PROPERTIES => Type::QpTableProperties,
             AV_FRAME_DATA_QP_TABLE_DATA => Type::QpTableData,
+            AV_FRAME_DATA_S12M_TIMECODE => Type::S12MTimeCode,
         }
     }
 }
@@ -92,7 +95,9 @@ impl Into<AVFrameSideDataType> for Type {
             Type::IccProfile => AV_FRAME_DATA_ICC_PROFILE,
 
             Type::QpTableProperties => AV_FRAME_DATA_QP_TABLE_PROPERTIES,
-            Type::QpTableData =>AV_FRAME_DATA_QP_TABLE_DATA,
+            Type::QpTableData => AV_FRAME_DATA_QP_TABLE_DATA,
+
+            Type::S12MTimeCode => AV_FRAME_DATA_S12M_TIMECODE,
         }
     }
 }

@@ -486,6 +486,17 @@ pub enum Id {
     APTX,
     APTX_HD,
     SBC,
+
+    AVS2,
+    IMM4,
+    PROSUMER,
+    MWSC,
+    WCMV,
+    RASC,
+    VIDC,
+    ATRAC9,
+    TTML,
+
 }
 
 impl Id {
@@ -975,6 +986,16 @@ impl From<AVCodecID> for Id {
             AV_CODEC_ID_APTX => Id::APTX,
             AV_CODEC_ID_APTX_HD => Id::APTX_HD,
             AV_CODEC_ID_SBC => Id::SBC,
+
+            AV_CODEC_ID_AVS2 => Id::AVS2,
+            AV_CODEC_ID_IMM4 => Id::IMM4,
+            AV_CODEC_ID_PROSUMER => Id::PROSUMER,
+            AV_CODEC_ID_MWSC => Id::MWSC,
+            AV_CODEC_ID_WCMV => Id::WCMV,
+            AV_CODEC_ID_RASC => Id::RASC,
+            AV_CODEC_ID_PCM_VIDC => Id::VIDC,
+            AV_CODEC_ID_ATRAC9 => Id::ATRAC9,
+            AV_CODEC_ID_TTML => Id::TTML,
         }
     }
 }
@@ -1460,6 +1481,16 @@ impl Into<AVCodecID> for Id {
             Id::APTX => AV_CODEC_ID_APTX,
             Id::APTX_HD => AV_CODEC_ID_APTX_HD,
             Id::SBC => AV_CODEC_ID_SBC,
+
+            Id::AVS2 => AV_CODEC_ID_AVS2,
+            Id::IMM4 => AV_CODEC_ID_IMM4,
+            Id::PROSUMER => AV_CODEC_ID_PROSUMER,
+            Id::MWSC => AV_CODEC_ID_MWSC,
+            Id::WCMV => AV_CODEC_ID_WCMV,
+            Id::RASC => AV_CODEC_ID_RASC,
+            Id::VIDC => AV_CODEC_ID_PCM_VIDC,
+            Id::ATRAC9 => AV_CODEC_ID_ATRAC9,
+            Id::TTML => AV_CODEC_ID_TTML,
         }
     }
 }
