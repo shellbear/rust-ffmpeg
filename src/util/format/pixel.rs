@@ -229,9 +229,9 @@ pub enum Pixel {
     // --- defaults
     #[cfg(feature = "ff_api_xvmc")]
     XVMC,
-    Y400A,
-    GRAY8A,
-    GBR24P,
+    //Y400A,
+    //GRAY8A,
+    //GBR24P,
 
     RGB32,
     RGB32_1,
@@ -835,9 +835,9 @@ impl Into<AVPixelFormat> for Pixel {
 
             // --- defaults
             //Pixel::XVMC => AV_PIX_FMT_XVMC,
-            Pixel::Y400A => AV_PIX_FMT_Y400A,
-            Pixel::GRAY8A => AV_PIX_FMT_GRAY8A,
-            Pixel::GBR24P => AV_PIX_FMT_GBR24P,
+            //Pixel::Y400A => AV_PIX_FMT_Y400A,
+            //Pixel::GRAY8A => AV_PIX_FMT_GRAY8A,
+            //Pixel::GBR24P => AV_PIX_FMT_GBR24P,
 
             Pixel::RGB32 => AV_PIX_FMT_RGB32,
             Pixel::RGB32_1 => AV_PIX_FMT_RGB32_1,
