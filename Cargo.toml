@@ -26,8 +26,10 @@ build-pic  = ["ffmpeg-sys/build-pic"]
 build-zlib = ["ffmpeg-sys/build-zlib"]
 
 # ssl
-build-lib-gnutls  = ["ffmpeg-sys/build-lib-gnutls"]
-build-lib-openssl = ["ffmpeg-sys/build-lib-openssl"]
+build-lib-gnutls          = ["ffmpeg-sys/build-lib-gnutls"]
+build-lib-openssl         = ["ffmpeg-sys/build-lib-openssl"]
+build-lib-schannel        = ["ffmpeg-sys/build-lib-schannel"]
+build-lib-securetransport = ["ffmpeg-sys/build-lib-securetransport"]
 
 # filters
 build-lib-fontconfig = ["ffmpeg-sys/build-lib-fontconfig"]
