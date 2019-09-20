@@ -86,6 +86,11 @@ postprocessing      = ["ffmpeg-sys/postproc"]
 software-resampling = ["ffmpeg-sys/swresample"]
 software-scaling    = ["ffmpeg-sys/swscale", "codec"]
 
+# programs
+ffmpeg  = ["ffmpeg-sys/ffmpeg"]
+ffplay  = ["ffmpeg-sys/ffplay"]
+ffprobe = ["ffmpeg-sys/ffprobe"]
+
 [dependencies]
 libc     = "0.2"
 bitflags = "0.9"
