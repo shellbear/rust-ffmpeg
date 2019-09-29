@@ -16,7 +16,7 @@ impl Audio {
         &mut self,
         packet: &P,
         out: &mut frame::Audio,
-    ) -> Result<bool, Error> {
+    ) -> Result<(bool, i32), Error> {
         unsafe {
             let mut got: c_int = 0;
 
@@ -27,7 +27,7 @@ impl Audio {
                 packet.as_ptr(),
             ) {
                 e if e < 0 => Err(Error::from(e)),
-                _ => Ok(got != 0),
+                decoded => Ok((got != 0, decoded)),
             }
         }
     }
