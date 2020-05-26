@@ -39,6 +39,8 @@ pub enum Pixel {
     RGB4_BYTE,
     NV12,
     NV21,
+    NV24,
+    NV42,
 
     ARGB,
     RGBA,
@@ -95,6 +97,10 @@ pub enum Pixel {
     YUV422P16BE,
     YUV444P16LE,
     YUV444P16BE,
+    YUVA422P12BE,
+    YUVA422P12LE,
+    YUVA444P12BE,
+    YUVA444P12LE,
     #[cfg(feature = "ff_api_vdpau")]
     VDPAU_MPEG4,
     DXVA2_VLD,
@@ -394,6 +400,8 @@ impl From<AVPixelFormat> for Pixel {
             AV_PIX_FMT_RGB4_BYTE => Pixel::RGB4_BYTE,
             AV_PIX_FMT_NV12 => Pixel::NV12,
             AV_PIX_FMT_NV21 => Pixel::NV21,
+            AV_PIX_FMT_NV24 => Pixel::NV24,
+            AV_PIX_FMT_NV42 => Pixel::NV42,
 
             AV_PIX_FMT_ARGB => Pixel::ARGB,
             AV_PIX_FMT_RGBA => Pixel::RGBA,
@@ -449,6 +457,10 @@ impl From<AVPixelFormat> for Pixel {
             AV_PIX_FMT_YUV422P16BE => Pixel::YUV422P16BE,
             AV_PIX_FMT_YUV444P16LE => Pixel::YUV444P16LE,
             AV_PIX_FMT_YUV444P16BE => Pixel::YUV444P16BE,
+            AV_PIX_FMT_YUVA422P12BE  => Pixel::YUVA422P12BE,
+            AV_PIX_FMT_YUVA422P12LE  => Pixel::YUVA422P12LE,
+            AV_PIX_FMT_YUVA444P12BE  => Pixel::YUVA444P12BE,
+            AV_PIX_FMT_YUVA444P12LE => Pixel::YUVA444P12LE,
             #[cfg(feature = "ff_api_vdpau")]
             AV_PIX_FMT_VDPAU_MPEG4 => Pixel::VDPAU_MPEG4,
             AV_PIX_FMT_DXVA2_VLD => Pixel::DXVA2_VLD,
@@ -646,6 +658,13 @@ impl Into<AVPixelFormat> for Pixel {
             Pixel::RGB4_BYTE => AV_PIX_FMT_RGB4_BYTE,
             Pixel::NV12 => AV_PIX_FMT_NV12,
             Pixel::NV21 => AV_PIX_FMT_NV21,
+
+            Pixel::YUVA422P12BE => AV_PIX_FMT_YUVA422P12BE,
+            Pixel::YUVA422P12LE => AV_PIX_FMT_YUVA422P12LE,
+            Pixel::YUVA444P12BE => AV_PIX_FMT_YUVA444P12BE,
+            Pixel::YUVA444P12LE => AV_PIX_FMT_YUVA444P12LE,
+            Pixel::NV24 => AV_PIX_FMT_NV24,
+            Pixel::NV42 => AV_PIX_FMT_NV42,
 
             Pixel::ARGB => AV_PIX_FMT_ARGB,
             Pixel::RGBA => AV_PIX_FMT_RGBA,

@@ -25,6 +25,9 @@ pub enum Type {
     GOPTimecode,
     Spherical,
 
+    DynamicHDRPlus,
+    RegionsOfInterest,
+
     ContentLightLevel,
     IccProfile,
 
@@ -62,6 +65,9 @@ impl From<AVFrameSideDataType> for Type {
             AV_FRAME_DATA_GOP_TIMECODE => Type::GOPTimecode,
             AV_FRAME_DATA_SPHERICAL => Type::Spherical,
 
+            AV_FRAME_DATA_DYNAMIC_HDR_PLUS => Type::DynamicHDRPlus,
+            AV_FRAME_DATA_REGIONS_OF_INTEREST => Type::RegionsOfInterest,
+
             AV_FRAME_DATA_CONTENT_LIGHT_LEVEL => Type::ContentLightLevel,
             AV_FRAME_DATA_ICC_PROFILE => Type::IccProfile,
 
@@ -90,6 +96,9 @@ impl Into<AVFrameSideDataType> for Type {
             Type::MasteringDisplayMetadata => AV_FRAME_DATA_MASTERING_DISPLAY_METADATA,
             Type::GOPTimecode => AV_FRAME_DATA_GOP_TIMECODE,
             Type::Spherical => AV_FRAME_DATA_SPHERICAL,
+
+            Type::DynamicHDRPlus => AV_FRAME_DATA_DYNAMIC_HDR_PLUS,
+            Type::RegionsOfInterest => AV_FRAME_DATA_REGIONS_OF_INTEREST,
 
             Type::ContentLightLevel => AV_FRAME_DATA_CONTENT_LIGHT_LEVEL,
             Type::IccProfile => AV_FRAME_DATA_ICC_PROFILE,

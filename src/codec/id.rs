@@ -263,6 +263,15 @@ pub enum Id {
     PCM_S32LE_PLANAR,
     PCM_S16BE_PLANAR,
 
+    HYMT,
+    ARBC,
+    AGM,
+    LSCR,
+    VP4,
+    ADPCM_AGM,
+    ADPCM_HCOM,
+    ARIB_CAPTION,
+
     PCM_S64LE,
     PCM_S64BE,
 
@@ -765,6 +774,15 @@ impl From<AVCodecID> for Id {
             AV_CODEC_ID_PCM_S32LE_PLANAR => Id::PCM_S32LE_PLANAR,
             AV_CODEC_ID_PCM_S16BE_PLANAR => Id::PCM_S16BE_PLANAR,
 
+            AV_CODEC_ID_HYMT => Id::HYMT,
+            AV_CODEC_ID_ARBC => Id::ARBC,
+            AV_CODEC_ID_AGM => Id::AGM,
+            AV_CODEC_ID_LSCR => Id::LSCR,
+            AV_CODEC_ID_VP4 => Id::VP4,
+            AV_CODEC_ID_ADPCM_AGM => Id::ADPCM_AGM,
+            AV_CODEC_ID_HCOM => Id::ADPCM_HCOM,
+            AV_CODEC_ID_ARIB_CAPTION => Id::ARIB_CAPTION,
+
             AV_CODEC_ID_PCM_S64LE => Id::PCM_S64LE,
             AV_CODEC_ID_PCM_S64BE => Id::PCM_S64BE,
 
@@ -1257,6 +1275,15 @@ impl Into<AVCodecID> for Id {
             Id::PCM_S24LE_PLANAR => AV_CODEC_ID_PCM_S24LE_PLANAR,
             Id::PCM_S32LE_PLANAR => AV_CODEC_ID_PCM_S32LE_PLANAR,
             Id::PCM_S16BE_PLANAR => AV_CODEC_ID_PCM_S16BE_PLANAR,
+
+            Id::HYMT => AV_CODEC_ID_HYMT,
+            Id::ARBC => AV_CODEC_ID_ARBC,
+            Id::AGM => AV_CODEC_ID_AGM,
+            Id::LSCR => AV_CODEC_ID_LSCR,
+            Id::VP4 => AV_CODEC_ID_VP4,
+            Id::ADPCM_AGM => AV_CODEC_ID_ADPCM_AGM,
+            Id::ADPCM_HCOM => AV_CODEC_ID_HCOM,
+            Id::ARIB_CAPTION => AV_CODEC_ID_ARIB_CAPTION,
 
             Id::PCM_S64LE => AV_CODEC_ID_PCM_S64LE,
             Id::PCM_S64BE => AV_CODEC_ID_PCM_S64BE,
